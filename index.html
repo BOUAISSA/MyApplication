@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+  <form method="POST" enctype="multipart/form-data" class="form">
+    <label>Name *</label>
+    <input type="text" name="name" required>
+    <label>Email *</label>
+    <input type="email" name="email" required>
+    <label>Phone</label>
+    <input type="text" name="phone">
+    <label>Position applying for *</label>
+    <input type="text" name="position" required>
+    <label>Location</label>
+    <input type="text" name="location">
+    <label>Cover letter / Notes</label>
+    <textarea name="cover" rows="5"></textarea>
+    <label>Authorized to work?</label>
+    <select name="auth_to_work">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label>Upload CV</label>
+    <input type="file" name="cv" accept=".pdf,.doc,.docx">
+    <button type="submit">Submit application</button>
+  </form>
+{% endblock %}
